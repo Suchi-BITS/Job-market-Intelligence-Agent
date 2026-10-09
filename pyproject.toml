@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-market-intelligence-agent"
+version = "1.0.0"
+description = "A plain-Python rule-based agent for searching saved job-board listings."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+refresh = ["requests>=2.31.0"]
+
+[project.scripts]
+job-agent = "job_agent.cli:main"
+job-agent-refresh = "job_agent.refresh:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

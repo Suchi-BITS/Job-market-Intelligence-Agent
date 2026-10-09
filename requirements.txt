@@ -1,0 +1,2 @@
+# Core search uses only the Python standard library.
+# Optional online refresh: requests>=2.31.0
